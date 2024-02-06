@@ -1,0 +1,68 @@
+#toolbar {
+  margin: 10px 0;
+  padding: 10px;
+  background-color: #eee;
+}
+
+.carriage {
+  display: inline-block; /* แสดงโบกี้ในแนวนอน */
+  margin: 5px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  background-color: #f0f0f0;
+  cursor: move;
+}
+
+.carriage img {
+  display: block; /* ให้รูปภาพแสดงเป็นบล็อกเพื่อปรับขนาดได้ */
+  width: 100px; /* ปรับขนาดของรูปภาพตามต้องการ */
+  height: auto; /* ปรับขนาดความสูงอัตโนมัติ */
+  margin-bottom: 5px; /* ให้เว้นระยะห่างระหว่างรูปภาพกับข้อความ */
+}
+
+.carriage img:hover{
+    transform: scale(1.1);
+}
+
+
+#train {
+  margin: 20px;
+  padding: 10px;
+  border: 1px solid #000;
+  min-height: 100px;
+  white-space: nowrap; /* ให้โบกี้ไม่ขึ้นบรรทัดใหม่ */
+  overflow-x: auto; /* เพิ่ม scrollbar แนวนอนถ้าจำเป็น */
+}
+
+button {
+  border: none;
+  color: #fff;
+  background-image: linear-gradient(30deg, #0400ff, #4ce3f7);
+  border-radius: 20px;
+  background-size: 100% auto;
+  font-family: inherit;
+  font-size: 17px;
+  padding: 0.6em 1.5em;
+  cursor: pointer;
+}
+
+button:hover {
+  background-position: right center;
+  background-size: 200% auto;
+  -webkit-animation: pulse 2s infinite;
+  animation: pulse512 1.5s infinite;
+}
+
+@keyframes pulse512 {
+  0% {
+    box-shadow: 0 0 0 0 #05bada66;
+  }
+
+  70% {
+    box-shadow: 0 0 0 10px rgb(218 103 68 / 0%);
+  }
+
+  100% {
+    box-shadow: 0 0 0 0 rgb(218 103 68 / 0%);
+  }
+}
